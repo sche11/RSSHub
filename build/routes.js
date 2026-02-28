@@ -3484,6 +3484,51 @@ export default {
     "description": "",
     "lang": "zh-CN"
   },
+  "4chan": {
+    "routes": {
+      "/:board/catalog/:routeParams?": {
+        "path": "/:board/catalog/:routeParams?",
+        "categories": [
+          "bbs"
+        ],
+        "example": "/4chan/g/catalog",
+        "parameters": {
+          "board": "4chan board",
+          "routeParams": "extra parameters, see the table above"
+        },
+        "features": {
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "name": "Board's catalog",
+        "maintainers": [
+          "heisenshark"
+        ],
+        "radar": [
+          {
+            "source": [
+              "boards.4chan.org/:board/"
+            ],
+            "target": "/:board/catalog"
+          }
+        ],
+        "description": "Specify options (in the format of query string) in parameter `routeParams` to control some extra features for Tweets\n| Key                            | Description                                                                                                                          | Accepts                | Defaults to                               |\n| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------- | ----------------------------------------- |\n| `showReplyCount`            | Show number of replies of each thread in catalog | `0`/`1`/`true`/`false` | `false` |\n| `showLastReplies`            | Show last 5 replies of each thread | `0`/`1`/`true`/`false` | `false` |\n| `revealSpoilers`            | Don't wrap images tagged as spoilers | `0`/`1`/`true`/`false` | `false` |",
+        "location": "catalog.tsx",
+        "module": () => import('@/routes/4chan/catalog.tsx')
+      }
+    },
+    "name": "4chan",
+    "apiRoutes": {},
+    "url": "4chan.org",
+    "categories": [
+      "bbs"
+    ],
+    "lang": "en",
+    "description": ""
+  },
   "4gamers": {
     "routes": {
       "/": {
