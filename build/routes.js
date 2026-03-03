@@ -5194,25 +5194,18 @@ export default {
   },
   "8kcos": {
     "routes": {
-      "/cat/:cat?": {
-        "path": "/cat/:cat?",
-        "parameters": {
-          "cat": "默认值为 `8kasianidol`，将目录页面url中 /category/ 后面的部分填入。如：https://www.8kcosplay.com/category/8kchineseidol/%e9%a3%8e%e4%b9%8b%e9%a2%86%e5%9f%9f/ 对应的RSS页面为 /8kcos/cat/%e9%a3%8e%e4%b9%8b%e9%a2%86%e5%9f%9f。"
-        },
-        "example": "/8kcos/cat/8kasianidol",
+      "/cat/:cat{.+}?": {
+        "path": "/cat/:cat{.+}?",
         "radar": [
           {
             "source": [
-              "8kcosplay.com/category/:mainCategory/:cat/",
-              "8kcosplay.com/category/:cat/"
+              "8kcosplay.com/"
             ],
-            "target": "/cat/:cat"
+            "target": ""
           }
         ],
-        "name": "分类",
-        "maintainers": [
-          "KotoriK"
-        ],
+        "name": "Unknown",
+        "maintainers": [],
         "url": "8kcosplay.com/",
         "features": {
           "nsfw": true
@@ -5225,7 +5218,7 @@ export default {
         "categories": [
           "picture"
         ],
-        "example": "/8kcos",
+        "example": "/8kcos/",
         "parameters": {},
         "features": {
           "requireConfig": false,
@@ -5240,7 +5233,8 @@ export default {
           {
             "source": [
               "8kcosplay.com/"
-            ]
+            ],
+            "target": ""
           }
         ],
         "name": "最新",
