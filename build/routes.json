@@ -81067,6 +81067,42 @@
       "name": "美露可利"
     }
   },
+  "meritalk": {
+    "routes": {
+      "/articles": {
+        "path": "/articles",
+        "categories": [
+          "new-media"
+        ],
+        "example": "/meritalk/articles",
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "meritalk.com/articles/"
+            ],
+            "target": "/articles"
+          }
+        ],
+        "name": "Latest Articles",
+        "maintainers": [
+          "superguyDiluc"
+        ],
+        "location": "articles.ts",
+        "module": "() => import('@/routes/meritalk/articles.ts')"
+      }
+    },
+    "name": "MeriTalk",
+    "apiRoutes": {},
+    "url": "meritalk.com"
+  },
   "meta": {
     "routes": {
       "/ai/blog": {
