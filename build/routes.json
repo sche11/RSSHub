@@ -92510,7 +92510,8 @@
         },
         "name": "Research",
         "maintainers": [
-          "yuguorui"
+          "yuguorui",
+          "chesha1"
         ],
         "location": "research.ts",
         "module": "() => import('@/routes/openai/research.ts')"
