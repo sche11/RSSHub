@@ -68837,7 +68837,7 @@ export default {
     },
     "apiRoutes": {},
     "name": "金色财经",
-    "url": "jinse.cn",
+    "url": "jinse.com.cn",
     "lang": "zh-CN"
   },
   "jisilu": {
