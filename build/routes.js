@@ -5894,15 +5894,16 @@ export default {
   },
   "acfun": {
     "routes": {
-      "/bangumi/:id": {
-        "path": "/bangumi/:id",
+      "/bangumi/:id/:embed?": {
+        "path": "/bangumi/:id/:embed?",
         "categories": [
           "anime"
         ],
         "view": 3,
-        "example": "/acfun/bangumi/5022158",
+        "example": "/acfun/bangumi/6000617",
         "parameters": {
-          "id": "番剧 id"
+          "id": "番剧 id",
+          "embed": "默认为开启内嵌视频, 任意值为关闭"
         },
         "features": {
           "requireConfig": false,
@@ -5916,7 +5917,7 @@ export default {
         "maintainers": [
           "xyqfer"
         ],
-        "description": "::: tip\n番剧 id 不包含开头的 aa。\n例如：`https://www.acfun.cn/bangumi/aa5022158` 的番剧 id 是 5022158，不包括开头的 aa。\n:::",
+        "description": "::: tip\n番剧 id 不包含开头的 aa。\n例如：`https://www.acfun.cn/bangumi/aa6000617` 的番剧 id 是 6000617，不包括开头的 aa。\n:::",
         "location": "bangumi.ts",
         "module": () => import('@/routes/acfun/bangumi.ts')
       },
@@ -6018,8 +6019,8 @@ export default {
         "location": "article.ts",
         "module": () => import('@/routes/acfun/article.ts')
       },
-      "/user/video/:uid": {
-        "path": "/user/video/:uid",
+      "/user/video/:uid/:embed?": {
+        "path": "/user/video/:uid/:embed?",
         "radar": [
           {
             "source": [
@@ -6030,7 +6031,8 @@ export default {
         ],
         "name": "用户投稿",
         "parameters": {
-          "uid": "用户 UID"
+          "uid": "用户 UID",
+          "embed": "默认为开启内嵌视频, 任意值为关闭"
         },
         "categories": [
           "anime"
@@ -21620,6 +21622,118 @@ export default {
     "url": "cast.org.cn",
     "lang": "zh-CN"
   },
+  "castanet": {
+    "routes": {
+      "/:category?": {
+        "path": "/:category?",
+        "categories": [
+          "traditional-media"
+        ],
+        "example": "/castanet/Kelowna",
+        "parameters": {
+          "category": {
+            "options": [
+              {
+                "value": "Top Headlines",
+                "label": "Top Headlines"
+              },
+              {
+                "value": "Recent Headlines",
+                "label": "Recent Headlines"
+              },
+              {
+                "value": "Kelowna",
+                "label": "Kelowna"
+              },
+              {
+                "value": "West-Kelowna",
+                "label": "West-Kelowna"
+              },
+              {
+                "value": "Peachland",
+                "label": "Peachland"
+              },
+              {
+                "value": "Vernon",
+                "label": "Vernon"
+              },
+              {
+                "value": "Salmon-Arm",
+                "label": "Salmon-Arm"
+              },
+              {
+                "value": "Penticton",
+                "label": "Penticton"
+              },
+              {
+                "value": "Oliver-Osoyoos",
+                "label": "Oliver-Osoyoos"
+              },
+              {
+                "value": "Kamloops",
+                "label": "Kamloops"
+              },
+              {
+                "value": "Nelson",
+                "label": "Nelson"
+              },
+              {
+                "value": "BC",
+                "label": "BC"
+              },
+              {
+                "value": "Canada",
+                "label": "Canada"
+              },
+              {
+                "value": "World",
+                "label": "World"
+              },
+              {
+                "value": "Business",
+                "label": "Business"
+              },
+              {
+                "value": "Sports",
+                "label": "Sports"
+              },
+              {
+                "value": "ShowBiz",
+                "label": "ShowBiz"
+              }
+            ],
+            "description": "Category",
+            "default": "Recent Headlines"
+          }
+        },
+        "radar": [
+          {
+            "source": [
+              "www.castanet.net/news/:category/"
+            ],
+            "target": "/:category"
+          },
+          {
+            "source": [
+              "www.castanet.net/"
+            ],
+            "target": "/"
+          }
+        ],
+        "name": "News",
+        "maintainers": [
+          "TonyRL"
+        ],
+        "url": "www.castanet.net",
+        "location": "news.ts",
+        "module": () => import('@/routes/castanet/news.ts')
+      }
+    },
+    "apiRoutes": {},
+    "name": "Castanet",
+    "url": "www.castanet.net",
+    "lang": "en"
+  },
   "catti": {
     "routes": {
       "/news/:category": {
@@ -32585,7 +32699,7 @@ export default {
         },
         "features": {
           "requireConfig": false,
-          "requirePuppeteer": false,
+          "requirePuppeteer": true,
           "antiCrawler": false,
           "supportBT": false,
           "supportPodcast": false,
@@ -32634,7 +32748,7 @@ export default {
         },
         "features": {
           "requireConfig": false,
-          "requirePuppeteer": false,
+          "requirePuppeteer": true,
           "antiCrawler": false,
           "supportBT": false,
           "supportPodcast": false,
@@ -33391,13 +33505,16 @@ export default {
           }
         ],
         "name": "分类",
-        "maintainers": [],
+        "maintainers": [
+          "XinRoom"
+        ],
         "url": "ddosi.org/",
         "location": "category.ts",
         "module": () => import('@/routes/ddosi/category.ts')
       },
       "/": {
         "path": "/",
+        "example": "/ddosi",
         "radar": [
           {
             "source": [
@@ -33406,7 +33523,7 @@ export default {
             "target": ""
           }
         ],
-        "name": "Unknown",
+        "name": "首页",
         "maintainers": [
           "XinRoom"
         ],
@@ -73839,6 +73956,22 @@ export default {
           "supportPodcast": false,
           "supportScihub": false
         },
+        "radar": [
+          {
+            "source": [
+              "china.kyodonews.net/news/:keyword",
+              "china.kyodonews.net/"
+            ],
+            "target": "/china/:keyword?"
+          },
+          {
+            "source": [
+              "tchina.kyodonews.net/news/:keyword",
+              "tchina.kyodonews.net/"
+            ],
+            "target": "/tchina/:keyword?"
+          }
+        ],
         "name": "最新报道",
         "maintainers": [
           "Rongronggg9"
@@ -75865,6 +75998,54 @@ export default {
       "name": "慕尼黑大学"
     },
     "lang": "de"
+  },
+  "locals": {
+    "routes": {
+      "/content/:community/:option1?/:option2?": {
+        "path": "/content/:community/:option1?/:option2?",
+        "categories": [
+          "social-media"
+        ],
+        "example": "/locals/content/mattfradd/video",
+        "parameters": {
+          "community": "Community slug from `locals.com/:community/feed?mode=content`",
+          "option1": "Filter or content type. Filters: `plus`, `nonplus`. Content types: `video`, `live`, `audio`, `podcast`, `article`, `document`, `pdf`",
+          "option2": "Content type when `option1` is a filter"
+        },
+        "description": "Fetches the Locals content library with an authenticated session cookie. By default it merges regular content and content+ posts, and it can be filtered by access tier and media type.",
+        "features": {
+          "requireConfig": [
+            {
+              "name": "LOCALS_SESSION",
+              "description": "The value of the `locals2.v3.session` cookie after logging in to Locals"
+            }
+          ],
+          "requirePuppeteer": false,
+          "antiCrawler": true,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "locals.com/:community/feed"
+            ],
+            "target": "/content/:community"
+          }
+        ],
+        "name": "Content Feed",
+        "maintainers": [
+          "luckycold"
+        ],
+        "location": "feed.ts",
+        "module": () => import('@/routes/locals/feed.ts')
+      }
+    },
+    "apiRoutes": {},
+    "name": "Locals",
+    "url": "locals.com",
+    "lang": "en"
   },
   "lofter": {
     "routes": {
@@ -97149,6 +97330,50 @@ export default {
     "name": "Perplexity",
     "url": "www.perplexity.ai",
     "description": "Perplexity - AI-powered search and discovery engine",
+    "lang": "en"
+  },
+  "peterwunder": {
+    "routes": {
+      "/achievements": {
+        "path": "/achievements",
+        "categories": [
+          "other"
+        ],
+        "view": 2,
+        "example": "/peterwunder/achievements",
+        "parameters": {},
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "projects.peterwunder.de/achievements"
+            ]
+          }
+        ],
+        "name": "New Badges",
+        "maintainers": [
+          "LinxHex"
+        ],
+        "description": "Latest badge pages from Peter Wunder's All Activity Challenges catalog. `pubDate` uses the first 'Visible in the app' date because the site does not expose a publication timestamp.",
+        "url": "projects.peterwunder.de/achievements",
+        "location": "achievements.ts",
+        "module": () => import('@/routes/peterwunder/achievements.ts')
+      }
+    },
+    "apiRoutes": {},
+    "name": "Peter Wunder",
+    "url": "projects.peterwunder.de",
+    "categories": [
+      "other"
+    ],
+    "description": "Projects and catalogs maintained by Peter Wunder.",
     "lang": "en"
   },
   "phoronix": {
@@ -121719,6 +121944,41 @@ export default {
     "url": "thewirehindi.com",
     "lang": "hi"
   },
+  "thinkingmachines": {
+    "routes": {
+      "/news": {
+        "path": "/news",
+        "name": "News",
+        "url": "thinkingmachines.ai/news",
+        "maintainers": [
+          "w3nhao"
+        ],
+        "example": "/thinkingmachines/news",
+        "categories": [
+          "programming"
+        ],
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false
+        },
+        "radar": [
+          {
+            "source": [
+              "thinkingmachines.ai/news",
+              "thinkingmachines.ai/news/"
+            ],
+            "target": "/news"
+          }
+        ],
+        "location": "news.ts",
+        "module": () => import('@/routes/thinkingmachines/news.ts')
+      }
+    },
+    "apiRoutes": {},
+    "name": "Thinking Machines Lab",
+    "url": "thinkingmachines.ai"
+  },
   "thoughtco": {
     "routes": {
       "/:category?": {
@@ -124254,6 +124514,36 @@ export default {
     "name": "TV Tropes",
     "url": "tvtropes.org",
     "lang": "en"
+  },
+  "tw-nongmu": {
+    "routes": {
+      "/market": {
+        "path": "/market",
+        "categories": [
+          "other"
+        ],
+        "example": "/tw-nongmu/market",
+        "radar": [
+          {
+            "source": [
+              "www.tw-nongmu.com/market.html",
+              "www.tw-nongmu.com/"
+            ]
+          }
+        ],
+        "name": "鱼价行情",
+        "maintainers": [
+          "TonyRL"
+        ],
+        "url": "www.tw-nongmu.com/market.html",
+        "location": "market.ts",
+        "module": () => import('@/routes/tw-nongmu/market.ts')
+      }
+    },
+    "apiRoutes": {},
+    "name": "通威农业发展",
+    "url": "www.tw-nongmu.com",
+    "lang": "zh-CN"
   },
   "twitch": {
     "routes": {
@@ -129603,6 +129893,30 @@ export default {
   },
   "wechat": {
     "routes": {
+      "/wechat2rss/:id": {
+        "path": "/wechat2rss/:id",
+        "categories": [
+          "new-media"
+        ],
+        "example": "/wechat/wechat2rss/5b925323244e9737c39285596c53e3a2f4a30774",
+        "parameters": {
+          "id": "公众号 id，打开 `https://wechat2rss.xlab.app/posts/list/`，在 URL 中找到 id；注意不是公众号页的 id，而是订阅的 id"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "name": "公众号（Wechat2RSS 来源）",
+        "maintainers": [
+          "TonyRL"
+        ],
+        "location": "wechat2rss.ts",
+        "module": () => import('@/routes/wechat/wechat2rss.ts')
+      },
       "/announce": {
         "path": "/announce",
         "categories": [
@@ -129835,30 +130149,6 @@ export default {
         ],
         "location": "uread.ts",
         "module": () => import('@/routes/wechat/uread.ts')
-      },
-      "/wechat2rss/:id": {
-        "path": "/wechat2rss/:id",
-        "categories": [
-          "new-media"
-        ],
-        "example": "/wechat/wechat2rss/5b925323244e9737c39285596c53e3a2f4a30774",
-        "parameters": {
-          "id": "公众号 id，打开 `https://wechat2rss.xlab.app/posts/list/`，在 URL 中找到 id；注意不是公众号页的 id，而是订阅的 id"
-        },
-        "features": {
-          "requireConfig": false,
-          "requirePuppeteer": false,
-          "antiCrawler": false,
-          "supportBT": false,
-          "supportPodcast": false,
-          "supportScihub": false
-        },
-        "name": "公众号（Wechat2RSS 来源）",
-        "maintainers": [
-          "TonyRL"
-        ],
-        "location": "wechat2rss.ts",
-        "module": () => import('@/routes/wechat/wechat2rss.ts')
       }
     },
     "apiRoutes": {},
