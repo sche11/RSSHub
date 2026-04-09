@@ -99425,6 +99425,225 @@
     },
     "lang": "en"
   },
+  "polymarket": {
+    "routes": {
+      "/event/:slug": {
+        "path": "/event/:slug",
+        "categories": [
+          "finance"
+        ],
+        "example": "/polymarket/event/presidential-election-winner-2024",
+        "parameters": {
+          "slug": "Event slug from the URL (e.g. presidential-election-winner-2024)"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "polymarket.com/event/:slug"
+            ],
+            "target": "/event/:slug"
+          }
+        ],
+        "name": "Event",
+        "url": "polymarket.com",
+        "maintainers": [
+          "heqi201255"
+        ],
+        "location": "event.ts",
+        "module": "() => import('@/routes/polymarket/event.ts')"
+      },
+      "/events/:tagSlug?": {
+        "path": "/events/:tagSlug?",
+        "categories": [
+          "finance"
+        ],
+        "example": "/polymarket/events",
+        "parameters": {
+          "tagSlug": "Tag slug to filter events, e.g. politics, sports, crypto. Omit for all events."
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "polymarket.com",
+              "polymarket.com/:tagSlug"
+            ],
+            "target": "/events/:tagSlug"
+          }
+        ],
+        "name": "Events",
+        "url": "polymarket.com",
+        "maintainers": [
+          "heqi201255"
+        ],
+        "location": "events.ts",
+        "module": "() => import('@/routes/polymarket/events.ts')"
+      },
+      "/leaderboard/:category?/:timePeriod?": {
+        "path": "/leaderboard/:category?/:timePeriod?",
+        "categories": [
+          "finance"
+        ],
+        "example": "/polymarket/leaderboard",
+        "parameters": {
+          "category": {
+            "description": "Market category: OVERALL, POLITICS, SPORTS, CRYPTO, CULTURE, MENTIONS, WEATHER, ECONOMICS, TECH, FINANCE",
+            "default": "OVERALL"
+          },
+          "timePeriod": {
+            "description": "Time period: DAY, WEEK, MONTH, ALL",
+            "default": "DAY"
+          }
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "name": "Leaderboard",
+        "url": "polymarket.com",
+        "maintainers": [
+          "heqi201255"
+        ],
+        "location": "leaderboard.ts",
+        "module": "() => import('@/routes/polymarket/leaderboard.ts')"
+      },
+      "/positions/:address": {
+        "path": "/positions/:address",
+        "categories": [
+          "finance"
+        ],
+        "example": "/polymarket/positions/0x7c3db723f1d4d8cb9c550095203b686cb11e5c6b",
+        "parameters": {
+          "address": "Wallet address (0x...)"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "name": "User Positions",
+        "url": "polymarket.com",
+        "maintainers": [
+          "heqi201255"
+        ],
+        "location": "positions.ts",
+        "module": "() => import('@/routes/polymarket/positions.ts')"
+      },
+      "/search/:query": {
+        "path": "/search/:query",
+        "categories": [
+          "finance"
+        ],
+        "example": "/polymarket/search/trump",
+        "parameters": {
+          "query": "Search query"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "name": "Search",
+        "url": "polymarket.com",
+        "maintainers": [
+          "heqi201255"
+        ],
+        "location": "search.ts",
+        "module": "() => import('@/routes/polymarket/search.ts')"
+      },
+      "/series/:slug?": {
+        "path": "/series/:slug?",
+        "categories": [
+          "finance"
+        ],
+        "example": "/polymarket/series",
+        "parameters": {
+          "slug": {
+            "description": "Series slug, e.g. nfl, nba, mlb. If omitted, lists all series.",
+            "default": "all"
+          }
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "polymarket.com/series/:slug"
+            ],
+            "target": "/series/:slug"
+          }
+        ],
+        "name": "Series",
+        "url": "polymarket.com",
+        "maintainers": [
+          "heqi201255"
+        ],
+        "location": "series.ts",
+        "module": "() => import('@/routes/polymarket/series.ts')"
+      },
+      "/user/:address": {
+        "path": "/user/:address",
+        "categories": [
+          "finance"
+        ],
+        "example": "/polymarket/user/0x7c3db723f1d4d8cb9c550095203b686cb11e5c6b",
+        "parameters": {
+          "address": "Wallet address (0x...)"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "name": "User Activity",
+        "url": "polymarket.com",
+        "maintainers": [
+          "heqi201255"
+        ],
+        "location": "user.ts",
+        "module": "() => import('@/routes/polymarket/user.ts')"
+      }
+    },
+    "apiRoutes": {},
+    "name": "Polymarket",
+    "url": "polymarket.com",
+    "description": "Polymarket is a prediction market platform where you can bet on real-world events.",
+    "lang": "en"
+  },
   "pornhub": {
     "routes": {
       "/category/:caty/:img?": {
@@ -121656,7 +121875,27 @@
         ],
         "example": "/thepaper/sidebar",
         "parameters": {
-          "sec": "侧边栏 id，可选 `hotNews` 即 澎湃热榜、`financialInformationNews` 即 澎湃财讯、`morningEveningNews` 即 早晚报，默认为 `hotNews`"
+          "sec": {
+            "description": "侧边栏 id",
+            "options": [
+              {
+                "label": "澎湃热榜",
+                "value": "hotNews"
+              },
+              {
+                "label": "澎湃快讯",
+                "value": "financialInformationNews"
+              },
+              {
+                "label": "早晚报",
+                "value": "morningEveningNews"
+              },
+              {
+                "label": "要闻精选",
+                "value": "editorHandpicked"
+              }
+            ]
+          }
         },
         "maintainers": [
           "bigfei"
@@ -124009,6 +124248,27 @@
         "view": 0,
         "location": "new.ts",
         "module": "() => import('@/routes/trendforce/new.ts')"
+      },
+      "/cn/presscenter/news": {
+        "path": "/cn/presscenter/news",
+        "categories": [
+          "new-media"
+        ],
+        "example": "/trendforce/cn/presscenter/news",
+        "radar": [
+          {
+            "source": [
+              "www.trendforce.cn/presscenter/news"
+            ]
+          }
+        ],
+        "name": "产业洞察",
+        "maintainers": [
+          "TonyRL"
+        ],
+        "url": "www.trendforce.cn/presscenter/news",
+        "location": "news-cn.ts",
+        "module": "() => import('@/routes/trendforce/news-cn.ts')"
       }
     },
     "apiRoutes": {},
@@ -124018,7 +124278,11 @@
       "new-media"
     ],
     "description": "",
-    "lang": "en"
+    "lang": "en",
+    "zh": {
+      "name": "集邦咨询",
+      "url": "trendforce.cn"
+    }
   },
   "trendingpapers": {
     "routes": {
@@ -131446,6 +131710,39 @@
     "name": "WziFile",
     "url": "antibody-software.com",
     "lang": "en"
+  },
+  "wkjyqh": {
+    "routes": {
+      "/research": {
+        "path": "/research",
+        "categories": [
+          "finance"
+        ],
+        "example": "/wkjyqh/research",
+        "radar": [
+          {
+            "source": [
+              "www.wkjyqh.com/main/research_center/yjbg/index.shtml",
+              "www.wkjyqh.com/main/research_center/"
+            ]
+          }
+        ],
+        "name": "研究报告",
+        "maintainers": [
+          "TonyRL"
+        ],
+        "url": "www.wkjyqh.com/main/research_center/yjbg/index.shtml",
+        "location": "research.ts",
+        "module": "() => import('@/routes/wkjyqh/research.ts')"
+      }
+    },
+    "apiRoutes": {},
+    "name": "五矿期货",
+    "url": "www.wkjyqh.com",
+    "categories": [
+      "finance"
+    ],
+    "lang": "zh-CN"
   },
   "wmc-bj": {
     "routes": {
