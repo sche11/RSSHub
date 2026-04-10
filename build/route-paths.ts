@@ -1474,6 +1474,7 @@ export type RoutePath =
   | `/hypergryph/arknights/news/:group?`
   | `/i-cable/news/:category?`
   | `/ianspriggs/:category?`
+  | `/iapp/news`
   | `/icac/news/:lang?`
   | `/icbc/whpj/:format?`
   | `/idaily/:language?`
@@ -1558,6 +1559,7 @@ export type RoutePath =
   | `/iwara/users/:username/:type?`
   | `/ixigua/user/video/:uid/:disableEmbed?`
   | `/j-test/news`
+  | `/jable/search/:query`
   | `/jamesclear/3-2-1`
   | `/jamesclear/book-summaries`
   | `/jamesclear/great-speeches`
@@ -1927,6 +1929,7 @@ export type RoutePath =
   | `/mygopen/:label?`
   | `/mymusicsheet/user/sheets/:username/:iso?/:freeOnly?`
   | `/mysql/release/:version?`
+  | `/nanhua/report/:type1/:type2`
   | `/nankai/ai/:type?`
   | `/nankai/cc/:type?`
   | `/nankai/graduate/:type?`

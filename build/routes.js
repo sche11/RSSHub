@@ -62986,6 +62986,35 @@ export default {
     "url": "ianspriggs.com",
     "lang": "en"
   },
+  "iapp": {
+    "routes": {
+      "/news": {
+        "path": "/news",
+        "categories": [
+          "new-media"
+        ],
+        "example": "/iapp/news",
+        "radar": [
+          {
+            "source": [
+              "iapp.org/news"
+            ]
+          }
+        ],
+        "name": "News",
+        "maintainers": [
+          "TonyRL"
+        ],
+        "url": "iapp.org/news",
+        "location": "news.ts",
+        "module": () => import('@/routes/iapp/news.ts')
+      }
+    },
+    "apiRoutes": {},
+    "name": "IAPP",
+    "url": "iapp.org",
+    "lang": "en"
+  },
   "icac": {
     "routes": {
       "/news/:lang?": {
@@ -66579,6 +66608,47 @@ export default {
     "name": "实用日本语鉴定考试（J.TEST）",
     "url": "www.j-test.com",
     "lang": "ja"
+  },
+  "jable": {
+    "routes": {
+      "/search/:query": {
+        "path": "/search/:query",
+        "categories": [
+          "multimedia"
+        ],
+        "example": "/jable/search/みなみ羽琉",
+        "parameters": {
+          "query": "Search keyword"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false,
+          "nsfw": true
+        },
+        "radar": [
+          {
+            "source": [
+              "jable.tv/search/:query"
+            ],
+            "target": "/search/:query"
+          }
+        ],
+        "name": "Jable 搜索结果",
+        "maintainers": [
+          "eve2ptp"
+        ],
+        "location": "index.ts",
+        "module": () => import('@/routes/jable/index.ts')
+      }
+    },
+    "apiRoutes": {},
+    "name": "jable",
+    "url": "jable.tv",
+    "lang": "zh"
   },
   "jamesclear": {
     "routes": {
@@ -84394,6 +84464,39 @@ export default {
     "name": "MySQL",
     "url": "dev.mysql.com",
     "lang": "en"
+  },
+  "nanhua": {
+    "routes": {
+      "/report/:type1/:type2": {
+        "path": "/report/:type1/:type2",
+        "categories": [
+          "finance"
+        ],
+        "example": "/nanhua/report/WEEK/WEEK_black",
+        "parameters": {
+          "type1": "一级分类代码，如 `WEEK`（周度报告）、`SEASON`（季年报告）、`HOT`（热点报告）等，需要使用 `encodeURIComponent` 编码",
+          "type2": "二级分类代码，如 `WEEK_black`（黑色）、`WEEK_enchem`（能化）等，需要使用 `encodeURIComponent` 编码"
+        },
+        "radar": [
+          {
+            "source": [
+              "mall.nanhua.net/mall/r/w/reportNew/report-list.html"
+            ]
+          }
+        ],
+        "name": "研报",
+        "maintainers": [
+          "TonyRL"
+        ],
+        "url": "mall.nanhua.net/mall/r/w/reportNew/report-list.html",
+        "location": "report.ts",
+        "module": () => import('@/routes/nanhua/report.ts')
+      }
+    },
+    "apiRoutes": {},
+    "name": "南华期货",
+    "url": "mall.nanhua.net",
+    "lang": "zh-CN"
   },
   "nankai": {
     "routes": {
