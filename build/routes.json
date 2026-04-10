@@ -132815,6 +132815,49 @@
     "url": "xboxfan.com",
     "lang": "zh-CN"
   },
+  "xhamster": {
+    "routes": {
+      "/:creators": {
+        "path": "/:creators",
+        "categories": [
+          "multimedia"
+        ],
+        "example": "/xhamster/faustina-pierre",
+        "parameters": {
+          "creators": "Creator slug from the URL (e.g. `faustina-pierre`)"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false,
+          "nsfw": true
+        },
+        "radar": [
+          {
+            "source": [
+              "xhamster.com/creators/:creators",
+              "xhamster.com/creators/:creators/newest"
+            ],
+            "target": "/:creators"
+          }
+        ],
+        "name": "Newest Videos by Creator",
+        "maintainers": [
+          "eve2ptp"
+        ],
+        "url": "xhamster.com/faustina-pierre/newest",
+        "location": "index.ts",
+        "module": "() => import('@/routes/xhamster/index.ts')"
+      }
+    },
+    "apiRoutes": {},
+    "name": "xHamster",
+    "url": "xhamster.com",
+    "lang": "en"
+  },
   "xianbao": {
     "routes": {
       "/:category?": {
