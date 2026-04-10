@@ -24132,6 +24132,19 @@
       }
     ]
   },
+  "iapp.org": {
+    "_name": "IAPP",
+    ".": [
+      {
+        "title": "News",
+        "docs": "https://docs.rsshub.app/routes/new-media",
+        "source": [
+          "/news"
+        ],
+        "target": "/iapp/news"
+      }
+    ]
+  },
   "icac.org.hk": {
     "_name": "Hong Kong Independent Commission Against Corruption 香港廉政公署",
     ".": [
@@ -32876,6 +32889,19 @@
           "/:username"
         ],
         "target": "/mymusicsheet/user/sheets/:username"
+      }
+    ]
+  },
+  "nanhua.net": {
+    "_name": "南华期货",
+    "mall": [
+      {
+        "title": "研报",
+        "docs": "https://docs.rsshub.app/routes/finance",
+        "source": [
+          "/mall/r/w/reportNew/report-list.html"
+        ],
+        "target": "/nanhua(_,url)=>{const params=new URL(url).searchParams;const type1=params.get(\"type1\");const type2=params.get(\"type2\");return type1&&type2?`/nanhua/report/${encodeURIComponent(type1)}/${encodeURIComponent(type2)}`:\"\"}"
       }
     ]
   },

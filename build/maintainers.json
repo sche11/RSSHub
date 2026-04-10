@@ -4509,6 +4509,9 @@
   "/ianspriggs/:category?": [
     "nczitzk"
   ],
+  "/iapp/news": [
+    "TonyRL"
+  ],
   "/icac/news/:lang?": [
     "linbuxiao, TonyRL"
   ],
@@ -5881,6 +5884,9 @@
   ],
   "/mysql/release/:version?": [
     "nczitzk"
+  ],
+  "/nanhua/report/:type1/:type2": [
+    "TonyRL"
   ],
   "/nankai/ai/:type?": [
     "LMark"
