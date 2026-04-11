@@ -43084,6 +43084,68 @@
     "url": "fastbull.com",
     "lang": "en"
   },
+  "fcbayern": {
+    "routes": {
+      "/news/:language?": {
+        "path": "/news/:language?",
+        "categories": [
+          "new-media"
+        ],
+        "example": "/fcbayern/news",
+        "parameters": {
+          "language": {
+            "description": "Language",
+            "options": [
+              {
+                "value": "en",
+                "label": "English"
+              },
+              {
+                "value": "es",
+                "label": "Español"
+              },
+              {
+                "value": "de",
+                "label": "Deutsch"
+              },
+              {
+                "value": "zh",
+                "label": "中文"
+              }
+            ],
+            "default": "en"
+          }
+        },
+        "radar": [
+          {
+            "source": [
+              "fcbayern.com/:language/news",
+              "fcbayern.com/:language"
+            ],
+            "target": "/news/:language"
+          },
+          {
+            "source": [
+              "www.fcbayern.cn/news",
+              "www.fcbayern.cn"
+            ],
+            "target": "/news/zh"
+          }
+        ],
+        "name": "News",
+        "maintainers": [
+          "TonyRL"
+        ],
+        "url": "fcbayern.com",
+        "location": "news.ts",
+        "module": "() => import('@/routes/fcbayern/news.ts')"
+      }
+    },
+    "apiRoutes": {},
+    "name": "FC Bayern München",
+    "url": "fcbayern.com",
+    "lang": "en"
+  },
   "fda": {
     "routes": {
       "/cdrh/:titleOnly?": {
@@ -100440,6 +100502,50 @@
     "name": "Product Hunt",
     "url": "www.producthunt.com",
     "description": "> 官方 Feed 地址为: [https://www.producthunt.com/feed](https://www.producthunt.com/feed)",
+    "lang": "en"
+  },
+  "projectjav": {
+    "routes": {
+      "/actress/:id": {
+        "path": "/actress/:id",
+        "categories": [
+          "multimedia"
+        ],
+        "example": "/projectjav/actress/rima-arai-22198",
+        "parameters": {
+          "id": "Actress ID or slug, can be found in the actress page URL"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false,
+          "nsfw": true
+        },
+        "radar": [
+          {
+            "source": [
+              "projectjav.com/actress/:id"
+            ],
+            "target": "/actress/:id"
+          }
+        ],
+        "name": "Actress",
+        "maintainers": [
+          "Exat1979"
+        ],
+        "url": "projectjav.com/",
+        "description": "Fetches the latest movies from a specific actress page on ProjectJAV.",
+        "location": "actress.ts",
+        "module": "() => import('@/routes/projectjav/actress.ts')"
+      }
+    },
+    "apiRoutes": {},
+    "name": "ProjectJAV",
+    "url": "projectjav.com",
+    "description": "ProjectJAV provides adult video content information and streaming.",
     "lang": "en"
   },
   "ps": {

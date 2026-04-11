@@ -979,6 +979,7 @@ export type RoutePath =
   | `/fashionnetwork/cn/lists/:id?`
   | `/fastbull/express-news`
   | `/fastbull/news`
+  | `/fcbayern/news/:language?`
   | `/fda/cdrh/:titleOnly?`
   | `/fediverse/timeline/:account`
   | `/feng/forum/:id/:type?`
@@ -2280,6 +2281,7 @@ export type RoutePath =
   | `/priconne-redive/news/:server?`
   | `/producereport/:category{.+}?`
   | `/producthunt/today`
+  | `/projectjav/actress/:id`
   | `/ps/monthly-games`
   | `/ps/trophy/:id`
   | `/psnine/`

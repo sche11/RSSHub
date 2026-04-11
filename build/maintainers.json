@@ -3009,6 +3009,9 @@
   "/fastbull/news": [
     "nczitzk"
   ],
+  "/fcbayern/news/:language?": [
+    "TonyRL"
+  ],
   "/fda/cdrh/:titleOnly?": [],
   "/fediverse/timeline/:account": [
     "DIYgod",
@@ -6992,6 +6995,9 @@
   "/producthunt/today": [
     "miaoyafeng",
     "Fatpandac"
+  ],
+  "/projectjav/actress/:id": [
+    "Exat1979"
   ],
   "/ps/monthly-games": [
     "justjustCC"
