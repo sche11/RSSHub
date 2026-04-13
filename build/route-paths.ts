@@ -468,6 +468,7 @@ export type RoutePath =
   | `/casssp/news/:category?`
   | `/cast/:column/:subColumn/:category?`
   | `/castanet/:category?`
+  | `/castbox/channel/:channel`
   | `/catti/news/:category`
   | `/cau/ele`
   | `/cau/yjs`
@@ -2413,7 +2414,7 @@ export type RoutePath =
   | `/ruankao/news`
   | `/ruc/ai/:category?`
   | `/ruc/hr/:category?`
-  | `/runtrail/`
+  | `/runyeah/`
   | `/rustcc/jobs`
   | `/rustcc/news`
   | `/sakurazaka46/blog/:id?/:page?`

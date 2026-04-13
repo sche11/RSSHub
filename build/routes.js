@@ -12436,7 +12436,7 @@ export default {
       "/news/:lang?": {
         "path": "/news/:lang?",
         "categories": [
-          "other"
+          "sport"
         ],
         "example": "/atptour/news/en",
         "parameters": {
@@ -12460,6 +12460,9 @@ export default {
     "apiRoutes": {},
     "name": "ATP Tour",
     "url": "www.atptour.com",
+    "categories": [
+      "sport"
+    ],
     "description": "News from the official site of men's professional tennis.",
     "lang": "en"
   },
@@ -21733,6 +21736,47 @@ export default {
     "name": "Castanet",
     "url": "www.castanet.net",
     "lang": "en"
+  },
+  "castbox": {
+    "routes": {
+      "/channel/:channel": {
+        "path": "/channel/:channel",
+        "categories": [
+          "multimedia"
+        ],
+        "example": "/castbox/channel/Lemonade-Stand-id6776228",
+        "parameters": {
+          "channel": "Channel"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": true,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "castbox.fm/channel/:channel"
+            ],
+            "target": "/channel/:channel"
+          }
+        ],
+        "name": "Channels",
+        "description": "Get the channel from the Castbox channel URL. For example, the URL of the channel \"Lemonade Stand\" is `https://castbox.fm/channel/Lemonade-Stand-id6776228`, where `Lemonade-Stand-id6776228` is the `channel` parameter.\n    \n    You can use the RSSHub global `limit` query parameter to specify the maximum number of episodes to fetch from the Castbox API (defaults to 50). For example: `/castbox/channel/Lemonade-Stand-id6776228?limit=100`.",
+        "maintainers": [
+          "ananyatimalsina"
+        ],
+        "location": "channel.ts",
+        "module": () => import('@/routes/castbox/channel.ts')
+      }
+    },
+    "apiRoutes": {},
+    "name": "Castbox",
+    "url": "castbox.fm",
+    "description": "Castbox is a podcast distribution network and producer."
   },
   "catti": {
     "routes": {
@@ -36946,7 +36990,7 @@ export default {
       "/daily": {
         "path": "/daily",
         "categories": [
-          "new-media"
+          "sport"
         ],
         "example": "/dongqiudi/daily",
         "radar": [
@@ -36968,7 +37012,7 @@ export default {
       "/result/:team": {
         "path": "/result/:team",
         "categories": [
-          "new-media"
+          "sport"
         ],
         "example": "/dongqiudi/result/50001755",
         "parameters": {
@@ -36991,7 +37035,7 @@ export default {
       "/player_news/:id": {
         "path": "/player_news/:id",
         "categories": [
-          "new-media"
+          "sport"
         ],
         "example": "/dongqiudi/player_news/50000339",
         "parameters": {
@@ -37014,7 +37058,7 @@ export default {
       "/special/:id": {
         "path": "/special/:id",
         "categories": [
-          "new-media"
+          "sport"
         ],
         "example": "/dongqiudi/special/41",
         "parameters": {
@@ -37038,7 +37082,7 @@ export default {
       "/team_news/:team": {
         "path": "/team_news/:team",
         "categories": [
-          "new-media"
+          "sport"
         ],
         "example": "/dongqiudi/team_news/50001755",
         "parameters": {
@@ -37061,7 +37105,7 @@ export default {
       "/top_news/:id?": {
         "path": "/top_news/:id?",
         "categories": [
-          "new-media"
+          "sport"
         ],
         "example": "/dongqiudi/top_news/1",
         "parameters": {
@@ -37095,6 +37139,9 @@ export default {
     "apiRoutes": {},
     "name": "懂球帝",
     "url": "m.dongqiudi.com",
+    "categories": [
+      "sport"
+    ],
     "description": "::: tip\n-   可以通过头条新闻 + 参数过滤的形式获得早报、专题等内容。\n:::",
     "lang": "zh-CN"
   },
@@ -43089,7 +43136,7 @@ export default {
       "/news/:language?": {
         "path": "/news/:language?",
         "categories": [
-          "new-media"
+          "sport"
         ],
         "example": "/fcbayern/news",
         "parameters": {
@@ -43144,6 +43191,9 @@ export default {
     "apiRoutes": {},
     "name": "FC Bayern München",
     "url": "fcbayern.com",
+    "categories": [
+      "sport"
+    ],
     "lang": "en"
   },
   "fda": {
@@ -45955,6 +46005,9 @@ export default {
       "/": {
         "path": "/",
         "example": "/gameapps",
+        "categories": [
+          "game"
+        ],
         "radar": [
           {
             "source": [
@@ -75110,7 +75163,7 @@ export default {
       "/chrono": {
         "path": "/chrono",
         "categories": [
-          "new-media"
+          "sport"
         ],
         "example": "/lephoceen/chrono",
         "parameters": {},
@@ -75141,6 +75194,9 @@ export default {
     "apiRoutes": {},
     "name": "Le Phocéen",
     "url": "lephoceen.fr",
+    "categories": [
+      "sport"
+    ],
     "description": "Actualités de l'Olympique de Marseille du site lephocéen.fr"
   },
   "letterboxd": {
@@ -104910,30 +104966,36 @@ export default {
     },
     "lang": "zh-CN"
   },
-  "runtrail": {
+  "runyeah": {
     "routes": {
       "/": {
         "path": "/",
+        "example": "/runyeah",
         "radar": [
           {
             "source": [
-              "runtrail.cn/"
-            ],
-            "target": ""
+              "runyeah.world/"
+            ]
           }
         ],
-        "name": "Unknown",
+        "categories": [
+          "sport"
+        ],
+        "name": "最新文章",
         "maintainers": [
           "TonyRL"
         ],
-        "url": "runtrail.cn/",
+        "url": "runyeah.world/",
         "location": "posts.ts",
-        "module": () => import('@/routes/runtrail/posts.ts')
+        "module": () => import('@/routes/runyeah/posts.ts')
       }
     },
     "apiRoutes": {},
     "name": "跑野大爆炸",
-    "url": "runtrail.cn",
+    "url": "runyeah.world",
+    "categories": [
+      "sport"
+    ],
     "lang": "zh-CN"
   },
   "rustcc": {
@@ -110056,7 +110118,7 @@ export default {
         "path": "/sports/:type?",
         "name": "新浪体育",
         "categories": [
-          "new-media"
+          "sport"
         ],
         "example": "/sports",
         "parameters": {
@@ -111037,7 +111099,7 @@ export default {
       "/news/:team": {
         "path": "/news/:team",
         "categories": [
-          "new-media"
+          "sport"
         ],
         "example": "/skysports/news/ac-milan",
         "parameters": {
@@ -111062,6 +111124,9 @@ export default {
     "apiRoutes": {},
     "name": "Sky Sports",
     "url": "skysports.com",
+    "categories": [
+      "sport"
+    ],
     "lang": "en"
   },
   "slashdot": {
@@ -131140,7 +131205,7 @@ export default {
       "/news": {
         "path": "/news",
         "categories": [
-          "other"
+          "sport"
         ],
         "example": "/wfdf/news",
         "parameters": {},
@@ -131172,6 +131237,9 @@ export default {
     "apiRoutes": {},
     "name": "WFDF",
     "url": "wfdf.sport",
+    "categories": [
+      "sport"
+    ],
     "lang": "en"
   },
   "wfu": {

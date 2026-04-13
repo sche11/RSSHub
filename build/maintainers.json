@@ -1420,6 +1420,9 @@
   "/castanet/:category?": [
     "TonyRL"
   ],
+  "/castbox/channel/:channel": [
+    "ananyatimalsina"
+  ],
   "/catti/news/:category": [
     "PrinOrange"
   ],
@@ -7402,7 +7405,7 @@
   "/ruc/hr/:category?": [
     "nczitzk"
   ],
-  "/runtrail/": [
+  "/runyeah/": [
     "TonyRL"
   ],
   "/rustcc/jobs": [
