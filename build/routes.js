@@ -9816,6 +9816,28 @@ export default {
   },
   "android": {
     "routes": {
+      "/pixel-update-bulletin": {
+        "path": "/pixel-update-bulletin",
+        "categories": [
+          "program-update"
+        ],
+        "example": "/android/pixel-update-bulletin",
+        "radar": [
+          {
+            "source": [
+              "source.android.com/docs/security/bulletin/pixel",
+              "source.android.com"
+            ]
+          }
+        ],
+        "name": "Pixel Update Bulletins",
+        "maintainers": [
+          "TonyRL"
+        ],
+        "url": "source.android.com/docs/security/bulletin/pixel",
+        "location": "pixel-update-bulletin.ts",
+        "module": () => import('@/routes/android/pixel-update-bulletin.ts')
+      },
       "/platform-tools-releases": {
         "path": "/platform-tools-releases",
         "categories": [
@@ -20607,6 +20629,62 @@ export default {
     "name": "全国港澳研究会",
     "url": "cahkms.org",
     "lang": "zh-CN"
+  },
+  "caicai": {
+    "routes": {
+      "/blog/:lang?": {
+        "path": "/blog/:lang?",
+        "categories": [
+          "blog"
+        ],
+        "example": "/caicai/blog",
+        "parameters": {
+          "lang": {
+            "description": "Language",
+            "options": [
+              {
+                "value": "en",
+                "label": "English"
+              },
+              {
+                "value": "zh",
+                "label": "中文"
+              }
+            ],
+            "default": "en"
+          }
+        },
+        "radar": [
+          {
+            "source": [
+              "www.caicai.me/blogs"
+            ]
+          },
+          {
+            "source": [
+              "www.caicai.me/zh/blogs"
+            ],
+            "target": "/blog/zh"
+          }
+        ],
+        "name": "Blog",
+        "maintainers": [
+          "TonyRL"
+        ],
+        "url": "www.caicai.me/blogs",
+        "location": "blog.ts",
+        "module": () => import('@/routes/caicai/blog.ts')
+      }
+    },
+    "apiRoutes": {},
+    "name": "CaiCai",
+    "url": "www.caicai.me",
+    "categories": [
+      "blog"
+    ],
+    "zh": {
+      "name": "CaiCai 的博客"
+    }
   },
   "caijing": {
     "routes": {

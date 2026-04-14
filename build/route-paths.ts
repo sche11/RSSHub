@@ -180,6 +180,7 @@ export type RoutePath =
   | `/amazon/awsblogs/:locale?`
   | `/amazon/kindle/software-updates`
   | `/amz123/kx`
+  | `/android/pixel-update-bulletin`
   | `/android/platform-tools-releases`
   | `/android/security-bulletin`
   | `/anime1anime/:category/:name`
@@ -438,6 +439,7 @@ export type RoutePath =
   | `/caareviews/exhibition`
   | `/cags/edu/:category`
   | `/cahkms/:category?`
+  | `/caicai/blog/:lang?`
   | `/caijing/roll`
   | `/caixin/:column/:category`
   | `/caixin/article`
