@@ -42708,7 +42708,13 @@ export default {
           "keyword": "Keyword, empty by default"
         },
         "features": {
-          "requireConfig": false,
+          "requireConfig": [
+            {
+              "name": "FANTIA_COOKIE",
+              "optional": true,
+              "description": "The `cookie` after login can be obtained by viewing the request header in the console, If not filled in will cause some posts that require login to read to get exceptions"
+            }
+          ],
           "requirePuppeteer": false,
           "antiCrawler": false,
           "supportBT": false,
@@ -42735,7 +42741,13 @@ export default {
           "id": "User id, can be found in user profile URL"
         },
         "features": {
-          "requireConfig": false,
+          "requireConfig": [
+            {
+              "name": "FANTIA_COOKIE",
+              "optional": true,
+              "description": "The `cookie` after login can be obtained by viewing the request header in the console, If not filled in will cause some posts that require login to read to get exceptions"
+            }
+          ],
           "requirePuppeteer": false,
           "antiCrawler": false,
           "supportBT": false,
