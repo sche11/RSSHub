@@ -139781,7 +139781,7 @@ export default {
       "/novel/:type": {
         "path": "/novel/:type",
         "name": "小说列表",
-        "url": "zxcs.info",
+        "url": "zxcs.click",
         "maintainers": [
           "liaochuan"
         ],
@@ -139804,7 +139804,7 @@ export default {
         "radar": [
           {
             "source": [
-              "zxcs.info/:type"
+              "zxcs.click/:type"
             ],
             "target": "/novel/:type"
           }
@@ -139815,7 +139815,7 @@ export default {
     },
     "apiRoutes": {},
     "name": "知轩藏书",
-    "url": "zxcs.info",
+    "url": "zxcs.click",
     "lang": "zh-CN"
   },
   "zyshow": {
