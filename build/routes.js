@@ -60344,6 +60344,108 @@ export default {
     "url": "guozaoke.com",
     "lang": "zh-CN"
   },
+  "gxmzu": {
+    "routes": {
+      "/aitzgg": {
+        "path": "/aitzgg",
+        "categories": [
+          "university"
+        ],
+        "example": "/gxmzu/aitzgg",
+        "parameters": {},
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "ai.gxmzu.edu.cn/index/tzgg.htm",
+              "ai.gxmzu.edu.cn/"
+            ]
+          }
+        ],
+        "name": "人工智能学院通知公告",
+        "maintainers": [
+          "real-jiakai"
+        ],
+        "url": "ai.gxmzu.edu.cn/index/tzgg.htm",
+        "location": "ai.ts",
+        "module": () => import('@/routes/gxmzu/ai.ts')
+      },
+      "/libzxxx": {
+        "path": "/libzxxx",
+        "categories": [
+          "university"
+        ],
+        "example": "/gxmzu/libzxxx",
+        "parameters": {},
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "library.gxmzu.edu.cn/news/news_list.jsp",
+              "library.gxmzu.edu.cn/"
+            ]
+          }
+        ],
+        "name": "图书馆最新消息",
+        "maintainers": [
+          "real-jiakai"
+        ],
+        "url": "library.gxmzu.edu.cn/news/news_list.jsp",
+        "description": "部分消息发布于微信公众号等站外页面，此类消息仅输出标题与原文链接。",
+        "location": "lib.ts",
+        "module": () => import('@/routes/gxmzu/lib.ts')
+      },
+      "/yjszsgg": {
+        "path": "/yjszsgg",
+        "categories": [
+          "university"
+        ],
+        "example": "/gxmzu/yjszsgg",
+        "parameters": {},
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "yjs.gxmzu.edu.cn/tzgg/zsgg.htm",
+              "yjs.gxmzu.edu.cn/"
+            ]
+          }
+        ],
+        "name": "研究生院招生公告",
+        "maintainers": [
+          "real-jiakai"
+        ],
+        "url": "yjs.gxmzu.edu.cn/tzgg/zsgg.htm",
+        "location": "yjs.ts",
+        "module": () => import('@/routes/gxmzu/yjs.ts')
+      }
+    },
+    "apiRoutes": {},
+    "name": "广西民族大学",
+    "url": "www.gxmzu.edu.cn",
+    "lang": "zh-CN"
+  },
   "gzdaily": {
     "routes": {
       "/app/:column?": {
@@ -68470,6 +68572,76 @@ export default {
     ],
     "description": "",
     "lang": "ko"
+  },
+  "jou": {
+    "routes": {
+      "/tzgg": {
+        "path": "/tzgg",
+        "categories": [
+          "university"
+        ],
+        "example": "/jou/tzgg",
+        "parameters": {},
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "www.jou.edu.cn/index/tzgg.htm",
+              "www.jou.edu.cn/"
+            ]
+          }
+        ],
+        "name": "官网通知公告",
+        "maintainers": [
+          "real-jiakai"
+        ],
+        "url": "www.jou.edu.cn/index/tzgg.htm",
+        "location": "home.ts",
+        "module": () => import('@/routes/jou/home.ts')
+      },
+      "/yztzgg": {
+        "path": "/yztzgg",
+        "categories": [
+          "university"
+        ],
+        "example": "/jou/yztzgg",
+        "parameters": {},
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "yz.jou.edu.cn/index/zxgg.htm",
+              "yz.jou.edu.cn/"
+            ]
+          }
+        ],
+        "name": "研招网通知公告",
+        "maintainers": [
+          "real-jiakai"
+        ],
+        "url": "yz.jou.edu.cn/index/zxgg.htm",
+        "location": "yz.ts",
+        "module": () => import('@/routes/jou/yz.ts')
+      }
+    },
+    "apiRoutes": {},
+    "name": "江苏海洋大学",
+    "url": "www.jou.edu.cn",
+    "lang": "zh-CN"
   },
   "jpmorganchase": {
     "routes": {
@@ -80565,6 +80737,77 @@ export default {
     "apiRoutes": {},
     "name": "南京理工大学",
     "url": "jwc.njust.edu.cn",
+    "lang": "zh-CN"
+  },
+  "njxzc": {
+    "routes": {
+      "/tzgg": {
+        "path": "/tzgg",
+        "categories": [
+          "university"
+        ],
+        "example": "/njxzc/tzgg",
+        "parameters": {},
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "www.njxzc.edu.cn/89/list.htm",
+              "www.njxzc.edu.cn/"
+            ]
+          }
+        ],
+        "name": "官网通知公告",
+        "maintainers": [
+          "real-jiakai"
+        ],
+        "url": "www.njxzc.edu.cn/89/list.htm",
+        "location": "home.ts",
+        "module": () => import('@/routes/njxzc/home.ts')
+      },
+      "/libtzgg": {
+        "path": "/libtzgg",
+        "categories": [
+          "university"
+        ],
+        "example": "/njxzc/libtzgg",
+        "parameters": {},
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "lib.njxzc.edu.cn/pxyhd/list.htm",
+              "lib.njxzc.edu.cn/"
+            ]
+          }
+        ],
+        "name": "图书馆通知公告",
+        "maintainers": [
+          "real-jiakai"
+        ],
+        "url": "lib.njxzc.edu.cn/pxyhd/list.htm",
+        "location": "lib.ts",
+        "module": () => import('@/routes/njxzc/lib.ts')
+      }
+    },
+    "apiRoutes": {},
+    "name": "南京晓庄学院",
+    "url": "www.njxzc.edu.cn",
+    "description": "部分文章仅限校内 IP 访问，此类文章仅输出标题与原文链接",
     "lang": "zh-CN"
   },
   "nlc": {
@@ -128152,107 +128395,6 @@ export default {
     "url": "guokr.com",
     "lang": "zh-CN"
   },
-  "gxmzu": {
-    "routes": {
-      "/libzxxx": {
-        "path": "/libzxxx",
-        "categories": [
-          "university"
-        ],
-        "example": "/gxmzu/libzxxx",
-        "parameters": {},
-        "features": {
-          "requireConfig": false,
-          "requirePuppeteer": false,
-          "antiCrawler": true,
-          "supportBT": false,
-          "supportPodcast": false,
-          "supportScihub": false
-        },
-        "radar": [
-          {
-            "source": [
-              "library.gxmzu.edu.cn/news/news_list.jsp",
-              "library.gxmzu.edu.cn/"
-            ]
-          }
-        ],
-        "name": "图书馆最新消息",
-        "maintainers": [
-          "real-jiakai"
-        ],
-        "url": "library.gxmzu.edu.cn/news/news_list.jsp",
-        "location": "lib.ts",
-        "module": () => import('@/routes/gxmzu/lib.ts')
-      },
-      "/aitzgg": {
-        "path": "/aitzgg",
-        "categories": [
-          "university"
-        ],
-        "example": "/gxmzu/aitzgg",
-        "parameters": {},
-        "features": {
-          "requireConfig": false,
-          "requirePuppeteer": false,
-          "antiCrawler": true,
-          "supportBT": false,
-          "supportPodcast": false,
-          "supportScihub": false
-        },
-        "radar": [
-          {
-            "source": [
-              "ai.gxmzu.edu.cn/index/tzgg.htm",
-              "ai.gxmzu.edu.cn/"
-            ]
-          }
-        ],
-        "name": "人工智能学院通知公告",
-        "maintainers": [
-          "real-jiakai"
-        ],
-        "url": "ai.gxmzu.edu.cn/index/tzgg.htm",
-        "location": "ai.ts",
-        "module": () => import('@/routes/gxmzu/ai.ts')
-      },
-      "/yjszsgg": {
-        "path": "/yjszsgg",
-        "categories": [
-          "university"
-        ],
-        "example": "/gxmzu/yjszsgg",
-        "parameters": {},
-        "features": {
-          "requireConfig": false,
-          "requirePuppeteer": false,
-          "antiCrawler": true,
-          "supportBT": false,
-          "supportPodcast": false,
-          "supportScihub": false
-        },
-        "radar": [
-          {
-            "source": [
-              "yjs.gxmzu.edu.cn/tzgg/zsgg.htm",
-              "yjs.gxmzu.edu.cn/"
-            ]
-          }
-        ],
-        "name": "研究生院招生公告",
-        "maintainers": [
-          "real-jiakai"
-        ],
-        "url": "yjs.gxmzu.edu.cn/tzgg/zsgg.htm",
-        "location": "yjs.ts",
-        "module": () => import('@/routes/gxmzu/yjs.ts')
-      }
-    },
-    "apiRoutes": {},
-    "name": "广西民族大学",
-    "url": "ai.gxmzu.edu.cn",
-    "lang": "zh-CN"
-  },
   "hafu": {
     "routes": {
       "/news/:type?": {
@@ -130723,76 +130865,6 @@ export default {
     ],
     "lang": "en"
   },
-  "jou": {
-    "routes": {
-      "/tzgg": {
-        "path": "/tzgg",
-        "categories": [
-          "university"
-        ],
-        "example": "/jou/tzgg",
-        "parameters": {},
-        "features": {
-          "requireConfig": false,
-          "requirePuppeteer": false,
-          "antiCrawler": false,
-          "supportBT": false,
-          "supportPodcast": false,
-          "supportScihub": false
-        },
-        "radar": [
-          {
-            "source": [
-              "www.jou.edu.cn/index/tzgg.htm",
-              "www.jou.edu.cn/"
-            ]
-          }
-        ],
-        "name": "官网通知公告",
-        "maintainers": [
-          "real-jiakai"
-        ],
-        "url": "www.jou.edu.cn/index/tzgg.htm",
-        "location": "home.ts",
-        "module": () => import('@/routes/jou/home.ts')
-      },
-      "/yztzgg": {
-        "path": "/yztzgg",
-        "categories": [
-          "university"
-        ],
-        "example": "/jou/yztzgg",
-        "parameters": {},
-        "features": {
-          "requireConfig": false,
-          "requirePuppeteer": false,
-          "antiCrawler": false,
-          "supportBT": false,
-          "supportPodcast": false,
-          "supportScihub": false
-        },
-        "radar": [
-          {
-            "source": [
-              "yz.jou.edu.cn/index/zxgg.htm",
-              "yz.jou.edu.cn/"
-            ]
-          }
-        ],
-        "name": "研招网通知公告",
-        "maintainers": [
-          "real-jiakai"
-        ],
-        "url": "yz.jou.edu.cn/index/zxgg.htm",
-        "location": "yz.ts",
-        "module": () => import('@/routes/jou/yz.ts')
-      }
-    },
-    "apiRoutes": {},
-    "name": "江苏海洋大学",
-    "url": "www.jou.edu.cn",
-    "lang": "zh-CN"
-  },
   "juejin": {
     "routes": {
       "/books": {
@@ -132622,76 +132694,6 @@ export default {
     "apiRoutes": {},
     "name": "南京中医药大学",
     "url": "lib.njucm.edu.cn",
-    "lang": "zh-CN"
-  },
-  "njxzc": {
-    "routes": {
-      "/libtzgg": {
-        "path": "/libtzgg",
-        "categories": [
-          "university"
-        ],
-        "example": "/njxzc/libtzgg",
-        "parameters": {},
-        "features": {
-          "requireConfig": false,
-          "requirePuppeteer": false,
-          "antiCrawler": true,
-          "supportBT": false,
-          "supportPodcast": false,
-          "supportScihub": false
-        },
-        "radar": [
-          {
-            "source": [
-              "lib.njxzc.edu.cn/pxyhd/list.htm",
-              "lib.njxzc.edu.cn/"
-            ]
-          }
-        ],
-        "name": "图书馆通知公告",
-        "maintainers": [
-          "real-jiakai"
-        ],
-        "url": "lib.njxzc.edu.cn/pxyhd/list.htm",
-        "location": "lib.ts",
-        "module": () => import('@/routes/njxzc/lib.ts')
-      },
-      "/tzgg": {
-        "path": "/tzgg",
-        "categories": [
-          "university"
-        ],
-        "example": "/njxzc/tzgg",
-        "parameters": {},
-        "features": {
-          "requireConfig": false,
-          "requirePuppeteer": false,
-          "antiCrawler": true,
-          "supportBT": false,
-          "supportPodcast": false,
-          "supportScihub": false
-        },
-        "radar": [
-          {
-            "source": [
-              "www.njxzc.edu.cn/89/list.htm",
-              "www.njxzc.edu.cn/"
-            ]
-          }
-        ],
-        "name": "官网通知公告",
-        "maintainers": [
-          "real-jiakai"
-        ],
-        "url": "www.njxzc.edu.cn/89/list.htm",
-        "location": "home.ts",
-        "module": () => import('@/routes/njxzc/home.ts')
-      }
-    },
-    "apiRoutes": {},
-    "name": "南京晓庄学院",
-    "url": "lib.njxzc.edu.cn",
     "lang": "zh-CN"
   },
   "nua": {
