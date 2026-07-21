@@ -17460,54 +17460,6 @@
     "url": "orcid.org",
     "lang": "en"
   },
-  "pawchive": {
-    "routes": {
-      "/:service/:id": {
-        "path": "/:service/:id",
-        "categories": [
-          "anime"
-        ],
-        "example": "/pawchive/fanbox/22445",
-        "parameters": {
-          "service": "service, either `patreon` or `fanbox`",
-          "id": "User id, can be found in URL"
-        },
-        "features": {
-          "requireConfig": false,
-          "requirePuppeteer": false,
-          "antiCrawler": false,
-          "supportBT": false,
-          "supportPodcast": false,
-          "supportScihub": false,
-          "nsfw": true
-        },
-        "radar": [
-          {
-            "source": [
-              "pawchive.st/"
-            ],
-            "target": ""
-          },
-          {
-            "source": [
-              "pawchive.st/:service/user/:id"
-            ],
-            "target": "/:service/:id"
-          }
-        ],
-        "name": "Posts",
-        "maintainers": [
-          "TonyRL"
-        ],
-        "location": "index.tsx",
-        "module": "() => import('@/routes/pawchive/index.tsx')"
-      }
-    },
-    "apiRoutes": {},
-    "name": "Pawchive",
-    "url": "pawchive.st",
-    "lang": "en"
-  },
   "pixabay": {
     "routes": {
       "/search/:q/:order?": {
@@ -19358,8 +19310,8 @@
   },
   "daily": {
     "routes": {
-      "/discussed/:period?/:innerSharedContent?/:dateSort?": {
-        "path": "/discussed/:period?/:innerSharedContent?/:dateSort?",
+      "/discussed/:period?/:dateSort?": {
+        "path": "/discussed/:period?/:dateSort?",
         "example": "/daily/discussed/30",
         "view": 0,
         "radar": [
@@ -19375,20 +19327,6 @@
         ],
         "url": "app.daily.dev/discussed",
         "parameters": {
-          "innerSharedContent": {
-            "description": "Where to Fetch inner Shared Posts instead of original",
-            "default": "false",
-            "options": [
-              {
-                "value": "false",
-                "label": "False"
-              },
-              {
-                "value": "true",
-                "label": "True"
-              }
-            ]
-          },
           "dateSort": {
             "description": "Sort posts by publication date instead of popularity",
             "default": "true",
@@ -19425,8 +19363,8 @@
         "location": "discussed.ts",
         "module": "() => import('@/routes/daily/discussed.ts')"
       },
-      "/popular/:innerSharedContent?/:dateSort?": {
-        "path": "/popular/:innerSharedContent?/:dateSort?",
+      "/popular/:dateSort?": {
+        "path": "/popular/:dateSort?",
         "example": "/daily/popular",
         "view": 0,
         "radar": [
@@ -19437,20 +19375,6 @@
           }
         ],
         "parameters": {
-          "innerSharedContent": {
-            "description": "Where to Fetch inner Shared Posts instead of original",
-            "default": "false",
-            "options": [
-              {
-                "value": "false",
-                "label": "False"
-              },
-              {
-                "value": "true",
-                "label": "True"
-              }
-            ]
-          },
           "dateSort": {
             "description": "Sort posts by publication date instead of popularity",
             "default": "true",
@@ -19474,25 +19398,11 @@
         "location": "popular.ts",
         "module": "() => import('@/routes/daily/popular.ts')"
       },
-      "/source/:sourceId/:innerSharedContent?": {
-        "path": "/source/:sourceId/:innerSharedContent?",
+      "/source/:sourceId": {
+        "path": "/source/:sourceId",
         "example": "/daily/source/hn",
         "parameters": {
-          "sourceId": "The source id",
-          "innerSharedContent": {
-            "description": "Where to Fetch inner Shared Posts instead of original",
-            "default": "false",
-            "options": [
-              {
-                "value": "false",
-                "label": "False"
-              },
-              {
-                "value": "true",
-                "label": "True"
-              }
-            ]
-          }
+          "sourceId": "The source id"
         },
         "radar": [
           {
@@ -19509,26 +19419,10 @@
         "location": "source.ts",
         "module": "() => import('@/routes/daily/source.ts')"
       },
-      "/squads/:squads/:innerSharedContent?": {
-        "path": "/squads/:squads/:innerSharedContent?",
+      "/squads/:squads": {
+        "path": "/squads/:squads",
         "example": "/daily/squads/watercooler",
         "view": 0,
-        "parameters": {
-          "innerSharedContent": {
-            "description": "Where to Fetch inner Shared Posts instead of original",
-            "default": "false",
-            "options": [
-              {
-                "value": "false",
-                "label": "False"
-              },
-              {
-                "value": "true",
-                "label": "True"
-              }
-            ]
-          }
-        },
         "radar": [
           {
             "source": [
@@ -19544,8 +19438,8 @@
         "location": "squads.ts",
         "module": "() => import('@/routes/daily/squads.ts')"
       },
-      "/upvoted/:period?/:innerSharedContent?/:dateSort?": {
-        "path": "/upvoted/:period?/:innerSharedContent?/:dateSort?",
+      "/upvoted/:period?/:dateSort?": {
+        "path": "/upvoted/:period?/:dateSort?",
         "example": "/daily/upvoted/7",
         "view": 0,
         "radar": [
@@ -19556,20 +19450,6 @@
           }
         ],
         "parameters": {
-          "innerSharedContent": {
-            "description": "Where to Fetch inner Shared Posts instead of original",
-            "default": "false",
-            "options": [
-              {
-                "value": "false",
-                "label": "False"
-              },
-              {
-                "value": "true",
-                "label": "True"
-              }
-            ]
-          },
           "dateSort": {
             "description": "Sort posts by publication date instead of popularity",
             "default": "true",
@@ -19611,8 +19491,8 @@
         "location": "upvoted.ts",
         "module": "() => import('@/routes/daily/upvoted.ts')"
       },
-      "/user/:userId/:innerSharedContent?": {
-        "path": "/user/:userId/:innerSharedContent?",
+      "/user/:userId": {
+        "path": "/user/:userId",
         "example": "/daily/user/kramer",
         "radar": [
           {
@@ -19622,22 +19502,6 @@
             ]
           }
         ],
-        "parameters": {
-          "innerSharedContent": {
-            "description": "Where to Fetch inner Shared Posts instead of original",
-            "default": "false",
-            "options": [
-              {
-                "value": "false",
-                "label": "False"
-              },
-              {
-                "value": "true",
-                "label": "True"
-              }
-            ]
-          }
-        },
         "name": "User Posts",
         "maintainers": [
           "TonyRL"
@@ -19897,6 +19761,7 @@
               "optional": true
             }
           ],
+          "requirePuppeteer": true,
           "nsfw": true
         },
         "location": "index.ts",
@@ -57194,6 +57059,61 @@
     "url": "pm.gc.ca",
     "lang": "en"
   },
+  "gdmuseum": {
+    "routes": {
+      "/exhibition/:type?": {
+        "path": "/exhibition/:type?",
+        "categories": [
+          "travel"
+        ],
+        "example": "/gdmuseum/exhibition/temp",
+        "parameters": {
+          "type": "Exhibition type, supported values: temp(临时展览), default: All exhibitions."
+        },
+        "name": "Current Exhibitions",
+        "maintainers": [
+          "magazian"
+        ],
+        "radar": [
+          {
+            "source": [
+              "www.gdmuseum.org.cn/col9/list"
+            ],
+            "target": "/exhibition"
+          }
+        ],
+        "location": "exhibition.tsx",
+        "module": "() => import('@/routes/gdmuseum/exhibition.tsx')"
+      },
+      "/information": {
+        "path": "/information",
+        "categories": [
+          "travel"
+        ],
+        "example": "/gdmuseum/information",
+        "name": "Information",
+        "maintainers": [
+          "magazian"
+        ],
+        "radar": [
+          {
+            "source": [
+              "www.gdmuseum.org.cn/cn/col51/list"
+            ],
+            "target": "/information"
+          }
+        ],
+        "location": "news.ts",
+        "module": "() => import('@/routes/gdmuseum/news.ts')"
+      }
+    },
+    "apiRoutes": {},
+    "name": "Guangdong Museum",
+    "url": "gdmuseum.org.cn",
+    "zh": {
+      "name": "广东省博物馆"
+    }
+  },
   "gdsrx": {
     "routes": {
       "/:id?": {
@@ -87961,6 +87881,54 @@
     "url": "paulgraham.com",
     "lang": "en"
   },
+  "pawchive": {
+    "routes": {
+      "/:service/:id": {
+        "path": "/:service/:id",
+        "categories": [
+          "anime"
+        ],
+        "example": "/pawchive/fanbox/22445",
+        "parameters": {
+          "service": "service, either `patreon` or `fanbox`",
+          "id": "User id, can be found in URL"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false,
+          "nsfw": true
+        },
+        "radar": [
+          {
+            "source": [
+              "pawchive.pw/"
+            ],
+            "target": ""
+          },
+          {
+            "source": [
+              "pawchive.pw/:service/user/:id"
+            ],
+            "target": "/:service/:id"
+          }
+        ],
+        "name": "Posts",
+        "maintainers": [
+          "TonyRL"
+        ],
+        "location": "index.tsx",
+        "module": "() => import('@/routes/pawchive/index.tsx')"
+      }
+    },
+    "apiRoutes": {},
+    "name": "Pawchive",
+    "url": "pawchive.pw",
+    "lang": "en"
+  },
   "pconline": {
     "routes": {
       "/focus/:category?": {
@@ -109781,12 +109749,17 @@
             "target": ""
           }
         ],
-        "name": "Unknown",
+        "name": "发现",
+        "example": "/xiaoyuzhou",
+        "categories": [
+          "multimedia"
+        ],
         "maintainers": [
           "prnake",
           "Maecenas"
         ],
         "url": "xiaoyuzhoufm.com/",
+        "description": "::: warning\n小宇宙的 api 需要验证 `x-jike-device-id`、`x-jike-access-token` 和 `x-jike-refresh-token` 。必要时需要自行配置，具体见部署文档。\n:::",
         "location": "pickup.ts",
         "module": "() => import('@/routes/xiaoyuzhou/pickup.ts')"
       },
