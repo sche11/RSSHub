@@ -26416,6 +26416,37 @@ export default {
     "url": "3dmgame.com",
     "lang": "zh-CN"
   },
+  "3gmuseum": {
+    "routes": {
+      "/tempexhibition": {
+        "path": "/tempexhibition",
+        "categories": [
+          "travel"
+        ],
+        "example": "/3gmuseum/tempexhibition",
+        "name": "Temporary Exhibition",
+        "maintainers": [
+          "magazian"
+        ],
+        "radar": [
+          {
+            "source": [
+              "www.3gmuseum.cn/web/column/col5009287.html"
+            ],
+            "target": "/tempexhibition"
+          }
+        ],
+        "location": "exhibition.tsx",
+        "module": () => import('@/routes/3gmuseum/exhibition.tsx')
+      }
+    },
+    "apiRoutes": {},
+    "name": "Chongqing China Three Gorges Museum",
+    "url": "www.3gmuseum.cn",
+    "zh": {
+      "name": "重庆中国三峡博物馆"
+    }
+  },
   "3kns": {
     "routes": {
       "/:filters?/:order?": {
