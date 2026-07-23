@@ -137,19 +137,10 @@ export default {
           "requireConfig": false,
           "requirePuppeteer": false,
           "antiCrawler": false,
-          "supportRadar": true,
           "supportBT": false,
           "supportPodcast": true,
           "supportScihub": false
         },
-        "radar": [
-          {
-            "source": [
-              "music.163.com/djradio"
-            ],
-            "target": "/music/djradio/:id"
-          }
-        ],
         "name": "电台节目",
         "maintainers": [
           "magic-akari"
@@ -161,14 +152,6 @@ export default {
         "path": "/music/user/events/:id",
         "categories": [
           "multimedia"
-        ],
-        "radar": [
-          {
-            "source": [
-              "music.163.com/user/event"
-            ],
-            "target": "/music/user/events/:id"
-          }
         ],
         "name": "用户动态",
         "maintainers": [
@@ -190,19 +173,10 @@ export default {
           "requireConfig": false,
           "requirePuppeteer": false,
           "antiCrawler": false,
-          "supportRadar": true,
           "supportBT": false,
           "supportPodcast": false,
           "supportScihub": false
         },
-        "radar": [
-          {
-            "source": [
-              "music.163.com/user/home"
-            ],
-            "target": "/music/user/playlist/:id"
-          }
-        ],
         "name": "用户歌单",
         "maintainers": [
           "DIYgod"
@@ -254,19 +228,10 @@ export default {
           "requireConfig": false,
           "requirePuppeteer": false,
           "antiCrawler": false,
-          "supportRadar": true,
           "supportBT": false,
           "supportPodcast": false,
           "supportScihub": false
         },
-        "radar": [
-          {
-            "source": [
-              "music.163.com/artist"
-            ],
-            "target": "/music/artist/songs/:id"
-          }
-        ],
         "name": "歌手歌曲",
         "maintainers": [
           "ZhongMingKun"
@@ -287,19 +252,10 @@ export default {
           "requireConfig": false,
           "requirePuppeteer": false,
           "antiCrawler": false,
-          "supportRadar": true,
           "supportBT": false,
           "supportPodcast": false,
           "supportScihub": false
         },
-        "radar": [
-          {
-            "source": [
-              "music.163.com/artist/album"
-            ],
-            "target": "/music/artist/:id"
-          }
-        ],
         "name": "歌手专辑",
         "maintainers": [
           "metowolf"
@@ -326,19 +282,10 @@ export default {
           ],
           "requirePuppeteer": false,
           "antiCrawler": true,
-          "supportRadar": true,
           "supportBT": false,
           "supportPodcast": false,
           "supportScihub": false
         },
-        "radar": [
-          {
-            "source": [
-              "music.163.com/playlist"
-            ],
-            "target": "/music/playlist/:id"
-          }
-        ],
         "name": "歌单歌曲",
         "maintainers": [
           "DIYgod"
@@ -103915,58 +103862,6 @@ export default {
     "url": "tisi.org",
     "lang": "zh-CN"
   },
-  "tjbwg": {
-    "routes": {
-      "/exhibition": {
-        "path": "/exhibition",
-        "categories": [
-          "travel"
-        ],
-        "example": "/tjbwg/exhibition",
-        "radar": [
-          {
-            "source": [
-              "www.tjbwg.cn/cn/ExhibitionList.aspx"
-            ],
-            "target": "/exhibition"
-          }
-        ],
-        "name": "Temporary Exhibition",
-        "maintainers": [
-          "magazian"
-        ],
-        "location": "exhibition.tsx",
-        "module": () => import('@/routes/tjbwg/exhibition.tsx')
-      },
-      "/news": {
-        "path": "/news",
-        "categories": [
-          "travel"
-        ],
-        "example": "/tjbwg/news",
-        "name": "News",
-        "maintainers": [
-          "magazian"
-        ],
-        "radar": [
-          {
-            "source": [
-              "www.tjbwg.cn/cn/NewsList.aspx"
-            ],
-            "target": "/news"
-          }
-        ],
-        "location": "news.ts",
-        "module": () => import('@/routes/tjbwg/news.ts')
-      }
-    },
-    "apiRoutes": {},
-    "name": "Tianjin Museum",
-    "url": "www.tjbwg.cn",
-    "zh": {
-      "name": "天津博物馆"
-    }
-  },
   "tju": {
     "routes": {
       "/cic/:type?": {
@@ -113332,32 +113227,6 @@ export default {
         ],
         "location": "list.ts",
         "module": () => import('@/routes/zju/list.ts')
-      },
-      "/math/:type": {
-        "path": "/math/:type",
-        "categories": [
-          "university"
-        ],
-        "example": "/zju/math/0",
-        "parameters": {
-          "type": "分类，见下表"
-        },
-        "features": {
-          "requireConfig": false,
-          "requirePuppeteer": false,
-          "antiCrawler": false,
-          "supportBT": false,
-          "supportPodcast": false,
-          "supportScihub": false
-        },
-        "name": "数学科学学院",
-        "description": "| 重要通知 | 本科生 | 研究生 | 科研 | 教学 | 人事 | 公示 |\n| -------- | ------ | ------ | ---- | ---- | ---- | ---- |\n| 0        | 1      | 2      | 3    | 4    | 5    | 6    |",
-        "maintainers": [
-          "Alex222222222222"
-        ],
-        "url": "www.math.zju.edu.cn",
-        "location": "math/index.ts",
-        "module": () => import('@/routes/zju/math/index.ts')
       },
       "/physics/:type": {
         "path": "/physics/:type",
