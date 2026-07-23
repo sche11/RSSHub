@@ -17613,6 +17613,40 @@ export default {
     "url": "rattibha.com",
     "lang": "en"
   },
+  "scmuseum": {
+    "routes": {
+      "/exhibition/:type?": {
+        "path": "/exhibition/:type?",
+        "categories": [
+          "travel"
+        ],
+        "example": "/scmuseum/exhibition/temp",
+        "parameters": {
+          "type": "Exhibition type, supported values: base (常设展览) or temp (临时展览), default is all exhibitions."
+        },
+        "name": "Exhibition",
+        "maintainers": [
+          "magazian"
+        ],
+        "radar": [
+          {
+            "source": [
+              "www.scmuseum.cn/Visit/Exhibition"
+            ],
+            "target": "/exhibition"
+          }
+        ],
+        "location": "exhibition.tsx",
+        "module": () => import('@/routes/scmuseum/exhibition.tsx')
+      }
+    },
+    "apiRoutes": {},
+    "name": "Sichuan Museum",
+    "url": "www.scmuseum.cn",
+    "zh": {
+      "name": "四川博物院"
+    }
+  },
   "sctv": {
     "routes": {
       "/programme/:id?/:limit?/:isFull?": {
@@ -38662,6 +38696,64 @@ export default {
     "url": "www.canada.ca",
     "description": "Government of Canada news by department",
     "lang": "en"
+  },
+  "capitalmuseum": {
+    "routes": {
+      "/exhibition/:type?": {
+        "path": "/exhibition/:type?",
+        "categories": [
+          "travel"
+        ],
+        "example": "/capitalmuseum/exhibition",
+        "parameters": {
+          "type": "Exhibition type, supported values: new(最新展览), review(展览回顾), default: All exhibitions."
+        },
+        "name": "Exhibitions",
+        "maintainers": [
+          "magazian"
+        ],
+        "radar": [
+          {
+            "source": [
+              "www.capitalmuseum.org.cn/exhibition"
+            ],
+            "target": "/exhibition"
+          }
+        ],
+        "location": "exhibition.tsx",
+        "module": () => import('@/routes/capitalmuseum/exhibition.tsx')
+      },
+      "/news/:type?": {
+        "path": "/news/:type?",
+        "categories": [
+          "travel"
+        ],
+        "example": "/capitalmuseum/news/notice",
+        "parameters": {
+          "type": "News type, supported values: news（新闻资讯）, notice（通知公告）. Default: All news."
+        },
+        "name": "News",
+        "maintainers": [
+          "magazian"
+        ],
+        "radar": [
+          {
+            "source": [
+              "www.capitalmuseum.org.cn/news"
+            ],
+            "target": "/news"
+          }
+        ],
+        "location": "news.ts",
+        "module": () => import('@/routes/capitalmuseum/news.ts')
+      }
+    },
+    "apiRoutes": {},
+    "name": "Capital Museum",
+    "url": "www.capitalmuseum.org.cn/",
+    "zh": {
+      "name": "首都博物馆"
+    }
   },
   "cartoonmad": {
     "routes": {
@@ -101314,6 +101406,37 @@ export default {
     "name": "园岭小学",
     "url": "ylxx.szftedu.cn",
     "lang": "zh-CN"
+  },
+  "szmuseum": {
+    "routes": {
+      "/temporary": {
+        "path": "/temporary",
+        "categories": [
+          "travel"
+        ],
+        "example": "/szmuseum/temporary",
+        "name": "Special Exhibition",
+        "maintainers": [
+          "magazian"
+        ],
+        "radar": [
+          {
+            "source": [
+              "www.szmuseum.com/Exhibition/Temporary"
+            ],
+            "target": "/temporary"
+          }
+        ],
+        "location": "temporary.tsx",
+        "module": () => import('@/routes/szmuseum/temporary.tsx')
+      }
+    },
+    "apiRoutes": {},
+    "name": "Suzhou Museum",
+    "url": "www.szmuseum.com",
+    "zh": {
+      "name": "苏州博物馆"
+    }
   },
   "szse": {
     "routes": {
