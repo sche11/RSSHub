@@ -137,10 +137,19 @@
           "requireConfig": false,
           "requirePuppeteer": false,
           "antiCrawler": false,
+          "supportRadar": true,
           "supportBT": false,
           "supportPodcast": true,
           "supportScihub": false
         },
+        "radar": [
+          {
+            "source": [
+              "music.163.com/djradio"
+            ],
+            "target": "/music/djradio/:id"
+          }
+        ],
         "name": "电台节目",
         "maintainers": [
           "magic-akari"
@@ -152,6 +161,14 @@
         "path": "/music/user/events/:id",
         "categories": [
           "multimedia"
+        ],
+        "radar": [
+          {
+            "source": [
+              "music.163.com/user/event"
+            ],
+            "target": "/music/user/events/:id"
+          }
         ],
         "name": "用户动态",
         "maintainers": [
@@ -173,10 +190,19 @@
           "requireConfig": false,
           "requirePuppeteer": false,
           "antiCrawler": false,
+          "supportRadar": true,
           "supportBT": false,
           "supportPodcast": false,
           "supportScihub": false
         },
+        "radar": [
+          {
+            "source": [
+              "music.163.com/user/home"
+            ],
+            "target": "/music/user/playlist/:id"
+          }
+        ],
         "name": "用户歌单",
         "maintainers": [
           "DIYgod"
@@ -228,10 +254,19 @@
           "requireConfig": false,
           "requirePuppeteer": false,
           "antiCrawler": false,
+          "supportRadar": true,
           "supportBT": false,
           "supportPodcast": false,
           "supportScihub": false
         },
+        "radar": [
+          {
+            "source": [
+              "music.163.com/artist"
+            ],
+            "target": "/music/artist/songs/:id"
+          }
+        ],
         "name": "歌手歌曲",
         "maintainers": [
           "ZhongMingKun"
@@ -252,10 +287,19 @@
           "requireConfig": false,
           "requirePuppeteer": false,
           "antiCrawler": false,
+          "supportRadar": true,
           "supportBT": false,
           "supportPodcast": false,
           "supportScihub": false
         },
+        "radar": [
+          {
+            "source": [
+              "music.163.com/artist/album"
+            ],
+            "target": "/music/artist/:id"
+          }
+        ],
         "name": "歌手专辑",
         "maintainers": [
           "metowolf"
@@ -282,10 +326,19 @@
           ],
           "requirePuppeteer": false,
           "antiCrawler": true,
+          "supportRadar": true,
           "supportBT": false,
           "supportPodcast": false,
           "supportScihub": false
         },
+        "radar": [
+          {
+            "source": [
+              "music.163.com/playlist"
+            ],
+            "target": "/music/playlist/:id"
+          }
+        ],
         "name": "歌单歌曲",
         "maintainers": [
           "DIYgod"
@@ -47133,6 +47186,64 @@
     "apiRoutes": {},
     "name": "中南大学",
     "url": "career.csu.edu.cn",
+    "lang": "zh-CN"
+  },
+  "csust": {
+    "routes": {
+      "/tggs": {
+        "path": "/tggs",
+        "categories": [
+          "university"
+        ],
+        "example": "/csust/tggs",
+        "features": {
+          "supportRadar": true
+        },
+        "radar": [
+          {
+            "source": [
+              "www.csust.edu.cn/tggs.htm",
+              "www.csust.edu.cn/"
+            ]
+          }
+        ],
+        "name": "通告公示",
+        "maintainers": [
+          "powerfullz"
+        ],
+        "url": "www.csust.edu.cn/tggs.htm",
+        "location": "tggs.ts",
+        "module": "() => import('@/routes/csust/tggs.ts')"
+      },
+      "/xkxs": {
+        "path": "/xkxs",
+        "categories": [
+          "university"
+        ],
+        "example": "/csust/xkxs",
+        "features": {
+          "supportRadar": true
+        },
+        "radar": [
+          {
+            "source": [
+              "www.csust.edu.cn/xkxs.htm",
+              "www.csust.edu.cn/"
+            ]
+          }
+        ],
+        "name": "学科学术",
+        "maintainers": [
+          "powerfullz"
+        ],
+        "url": "www.csust.edu.cn/xkxs.htm",
+        "location": "xkxs.ts",
+        "module": "() => import('@/routes/csust/xkxs.ts')"
+      }
+    },
+    "apiRoutes": {},
+    "name": "长沙理工大学",
+    "url": "www.csust.edu.cn",
     "lang": "zh-CN"
   },
   "ctbu": {
@@ -103862,6 +103973,58 @@
     "url": "tisi.org",
     "lang": "zh-CN"
   },
+  "tjbwg": {
+    "routes": {
+      "/exhibition": {
+        "path": "/exhibition",
+        "categories": [
+          "travel"
+        ],
+        "example": "/tjbwg/exhibition",
+        "radar": [
+          {
+            "source": [
+              "www.tjbwg.cn/cn/ExhibitionList.aspx"
+            ],
+            "target": "/exhibition"
+          }
+        ],
+        "name": "Temporary Exhibition",
+        "maintainers": [
+          "magazian"
+        ],
+        "location": "exhibition.tsx",
+        "module": "() => import('@/routes/tjbwg/exhibition.tsx')"
+      },
+      "/news": {
+        "path": "/news",
+        "categories": [
+          "travel"
+        ],
+        "example": "/tjbwg/news",
+        "name": "News",
+        "maintainers": [
+          "magazian"
+        ],
+        "radar": [
+          {
+            "source": [
+              "www.tjbwg.cn/cn/NewsList.aspx"
+            ],
+            "target": "/news"
+          }
+        ],
+        "location": "news.ts",
+        "module": "() => import('@/routes/tjbwg/news.ts')"
+      }
+    },
+    "apiRoutes": {},
+    "name": "Tianjin Museum",
+    "url": "www.tjbwg.cn",
+    "zh": {
+      "name": "天津博物馆"
+    }
+  },
   "tju": {
     "routes": {
       "/cic/:type?": {
@@ -113228,6 +113391,32 @@
         "location": "list.ts",
         "module": "() => import('@/routes/zju/list.ts')"
       },
+      "/math/:type": {
+        "path": "/math/:type",
+        "categories": [
+          "university"
+        ],
+        "example": "/zju/math/0",
+        "parameters": {
+          "type": "分类，见下表"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "name": "数学科学学院",
+        "description": "| 重要通知 | 本科生 | 研究生 | 科研 | 教学 | 人事 | 公示 |\n| -------- | ------ | ------ | ---- | ---- | ---- | ---- |\n| 0        | 1      | 2      | 3    | 4    | 5    | 6    |",
+        "maintainers": [
+          "Alex222222222222"
+        ],
+        "url": "www.math.zju.edu.cn",
+        "location": "math/index.ts",
+        "module": "() => import('@/routes/zju/math/index.ts')"
+      },
       "/physics/:type": {
         "path": "/physics/:type",
         "categories": [
@@ -119243,76 +119432,6 @@
       "programming"
     ],
     "lang": "en"
-  },
-  "csust": {
-    "routes": {
-      "/tggs": {
-        "path": "/tggs",
-        "categories": [
-          "university"
-        ],
-        "example": "/csust/tggs",
-        "parameters": {},
-        "features": {
-          "requireConfig": false,
-          "requirePuppeteer": false,
-          "antiCrawler": false,
-          "supportBT": false,
-          "supportPodcast": false,
-          "supportScihub": false
-        },
-        "radar": [
-          {
-            "source": [
-              "www.csust.edu.cn/tggs.htm",
-              "www.csust.edu.cn/"
-            ]
-          }
-        ],
-        "name": "通告公示",
-        "maintainers": [
-          "powerfullz"
-        ],
-        "url": "www.csust.edu.cn/tggs.htm",
-        "location": "tggs.ts",
-        "module": "() => import('@/routes/csust/tggs.ts')"
-      },
-      "/xkxs": {
-        "path": "/xkxs",
-        "categories": [
-          "university"
-        ],
-        "example": "/csust/xkxs",
-        "parameters": {},
-        "features": {
-          "requireConfig": false,
-          "requirePuppeteer": false,
-          "antiCrawler": false,
-          "supportBT": false,
-          "supportPodcast": false,
-          "supportScihub": false
-        },
-        "radar": [
-          {
-            "source": [
-              "www.csust.edu.cn/xkxs.htm",
-              "www.csust.edu.cn/"
-            ]
-          }
-        ],
-        "name": "学科学术",
-        "maintainers": [
-          "powerfullz"
-        ],
-        "url": "www.csust.edu.cn/xkxs.htm",
-        "location": "xkxs.ts",
-        "module": "() => import('@/routes/csust/xkxs.ts')"
-      }
-    },
-    "apiRoutes": {},
-    "name": "长沙理工大学",
-    "url": "www.csust.edu.cn",
-    "lang": "zh-CN"
   },
   "cw": {
     "routes": {
