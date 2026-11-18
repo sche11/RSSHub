@@ -672,6 +672,7 @@ export type RoutePath =
   | `/cjlu/yjsy/:cate`
   | `/claude/blog`
   | `/claude/code/changelog`
+  | `/claude/dev/blog`
   | `/clickme/:site/:grouping/:name`
   | `/cline/blog`
   | `/cloudflare/blog`
@@ -2645,6 +2646,7 @@ export type RoutePath =
   | `/oo-software/changelog/:id`
   | `/openai/chatgpt/release-notes`
   | `/openai/cookbook`
+  | `/openai/developers/blog/:lang?`
   | `/openai/news`
   | `/openai/research`
   | `/openalex/:journals/:type?/:ids?`
@@ -3636,6 +3638,7 @@ export type RoutePath =
   | `/viva-la-vita/featured`
   | `/viva-la-vita/hot`
   | `/viva-la-vita/latest`
+  | `/vllm/blog`
   | `/voanews/:language/:channel?`
   | `/vocus/publication/:id`
   | `/vocus/user/:id`
